@@ -1,0 +1,178 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home Planner — PocketSmart AI
+{% endblock %}
+
+
+{% block content %}
+
+<div class="page-head">
+
+    <span class="eyebrow">
+        PLANNER 01
+    </span>
+
+    <h1>
+        Home Interior Budget
+    </h1>
+
+    <p class="muted">
+        Tell us what you need.
+        We’ll build a budget-aware
+        starter plan.
+    </p>
+
+</div>
+
+
+<div class="planner-layout">
+
+
+<form
+    class="planner-form"
+    id="homeForm"
+>
+
+    <label>
+
+        Total budget (₹)
+
+        <input
+            name="budget"
+            type="number"
+            min="1"
+            required
+            placeholder="25000"
+        >
+
+    </label>
+
+
+    <label>
+
+        Rooms
+
+        <input
+            name="rooms"
+            placeholder="Living Room, Bedroom"
+        >
+
+    </label>
+
+
+    <label>
+
+        Style
+
+        <select name="style">
+
+            <option>
+                modern
+            </option>
+
+            <option>
+                minimal
+            </option>
+
+            <option>
+                traditional
+            </option>
+
+            <option>
+                industrial
+            </option>
+
+            <option>
+                boho
+            </option>
+
+        </select>
+
+    </label>
+
+
+    <label>
+
+        City
+
+        <input
+            name="city"
+            value="Villupuram"
+        >
+
+    </label>
+
+
+    <label>
+
+        Items / quantities
+
+        <small>
+            Example:
+            lighting:2, fan:2, table:1
+        </small>
+
+        <input
+            name="items"
+            placeholder="lighting:2, fan:2, table:1"
+        >
+
+    </label>
+
+
+    <label>
+
+        Notes
+
+        <textarea
+            name="notes"
+            placeholder="Any must-haves?"
+        ></textarea>
+
+    </label>
+
+
+    <button
+        class="btn primary full"
+        type="submit"
+    >
+        Generate Home Plan ✨
+    </button>
+
+
+    <p
+        class="form-msg"
+        id="homeMsg"
+    ></p>
+
+</form>
+
+
+<div
+    id="homeResult"
+    class="result-panel"
+>
+
+    <div class="empty">
+
+        Your recommendations
+        will appear here.
+
+    </div>
+
+</div>
+
+
+</div>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script>
+bindHomePlanner();
+</script>
+
+{% endblock %}

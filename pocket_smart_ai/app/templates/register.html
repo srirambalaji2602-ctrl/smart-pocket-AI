@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+
+{% block title %}
+Register — PocketSmart AI
+{% endblock %}
+
+
+{% block content %}
+
+<div class="auth-card">
+
+    <span class="eyebrow">
+        START PLANNING
+    </span>
+
+    <h1>
+        Create account
+    </h1>
+
+
+    <form id="registerForm">
+
+        <label>
+
+            Full name
+
+            <input
+                name="full_name"
+                maxlength="120"
+                placeholder="Your name"
+            >
+
+        </label>
+
+
+        <label>
+
+            Email
+
+            <input
+                name="email"
+                type="email"
+                required
+                placeholder="you@example.com"
+            >
+
+        </label>
+
+
+        <label>
+
+            Password
+
+            <input
+                name="password"
+                type="password"
+                minlength="8"
+                required
+                placeholder="Minimum 8 characters"
+            >
+
+        </label>
+
+
+        <button
+            class="btn primary full"
+            type="submit"
+        >
+            Create account
+        </button>
+
+    </form>
+
+
+    <p
+        class="form-msg"
+        id="registerMsg"
+    ></p>
+
+
+    <p class="muted">
+
+        Already registered?
+
+        <a href="/login">
+            Log in
+        </a>
+
+    </p>
+
+</div>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script>
+bindAuthForm(
+    "registerForm",
+    "/register",
+    "registerMsg"
+);
+</script>
+
+{% endblock %}

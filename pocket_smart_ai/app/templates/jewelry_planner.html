@@ -1,0 +1,218 @@
+{% extends "base.html" %}
+
+{% block title %}
+Jewelry Planner — PocketSmart AI
+{% endblock %}
+
+
+{% block content %}
+
+<div class="page-head">
+
+    <span class="eyebrow">
+        PLANNER 03
+    </span>
+
+    <h1>
+        Jewelry Budget Planner
+    </h1>
+
+    <p class="muted">
+        Describe the look, and optionally
+        upload an outfit image for
+        multimodal analysis.
+    </p>
+
+</div>
+
+
+<div class="planner-layout">
+
+
+<form
+    class="planner-form"
+    id="jewelryForm"
+    enctype="multipart/form-data"
+>
+
+    <label>
+
+        Budget (₹)
+
+        <input
+            name="budget"
+            type="number"
+            min="1"
+            required
+            placeholder="5000"
+        >
+
+    </label>
+
+
+    <label>
+
+        Occasion
+
+        <input
+            name="occasion"
+            value="party"
+        >
+
+    </label>
+
+
+    <label>
+
+        Style
+
+        <select name="style">
+
+            <option>
+                minimal
+            </option>
+
+            <option>
+                elegant
+            </option>
+
+            <option>
+                traditional
+            </option>
+
+            <option>
+                statement
+            </option>
+
+            <option>
+                western
+            </option>
+
+        </select>
+
+    </label>
+
+
+    <label>
+
+        Preferred metal
+
+        <select name="preferred_metal">
+
+            <option>
+                any
+            </option>
+
+            <option>
+                gold-tone
+            </option>
+
+            <option>
+                silver-tone
+            </option>
+
+            <option>
+                rose-gold-tone
+            </option>
+
+        </select>
+
+    </label>
+
+
+    <label>
+
+        Outfit description
+
+        <textarea
+            name="outfit_description"
+            placeholder="Example: navy blue shirt with a simple neckline"
+        ></textarea>
+
+    </label>
+
+
+    <label>
+
+        Outfit image
+
+        <small>
+            Optional · JPG/PNG/WEBP ·
+            max 5 MB
+        </small>
+
+        <input
+            name="outfit_image"
+            type="file"
+            accept="image/jpeg,image/png,image/webp"
+        >
+
+    </label>
+
+
+    <label>
+
+        City
+
+        <input
+            name="city"
+            value="Villupuram"
+        >
+
+    </label>
+
+
+    <label>
+
+        Notes
+
+        <textarea
+            name="notes"
+        ></textarea>
+
+    </label>
+
+
+    <button
+        class="btn primary full"
+        type="submit"
+    >
+        Generate Jewelry Plan 💎
+    </button>
+
+
+    <p
+        class="form-msg"
+        id="jewelryMsg"
+    ></p>
+
+</form>
+
+
+<div
+    id="jewelryResult"
+    class="result-panel"
+>
+
+    <div class="empty">
+
+        Your jewelry recommendations
+        will appear here.
+
+    </div>
+
+</div>
+
+
+</div>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script>
+bindJewelryPlanner();
+</script>
+
+{% endblock %}

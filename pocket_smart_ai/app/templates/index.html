@@ -1,0 +1,165 @@
+{% extends "base.html" %}
+
+{% block title %}
+PocketSmart AI — Smart Budget Assistant
+{% endblock %}
+
+
+{% block content %}
+
+<section class="hero">
+
+    <div>
+
+        <span class="eyebrow">
+            GENAI • BUDGET • RECOMMENDATIONS
+        </span>
+
+        <h1>
+            Plan smarter.<br>
+            <span>Spend with purpose.</span>
+        </h1>
+
+        <p>
+            PocketSmart AI turns your budget
+            into practical plans for home
+            interiors, parties and jewelry.
+        </p>
+
+
+        <div class="actions">
+
+            <a
+                class="btn primary"
+                href="/register"
+            >
+                Get Started
+            </a>
+
+            <a
+                class="btn secondary"
+                href="/dashboard"
+            >
+                Open Dashboard
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-card">
+
+        <div class="mini-label">
+            SMART ALLOCATION
+        </div>
+
+        <div class="amount">
+            ₹25,000
+        </div>
+
+        <div class="progress">
+            <i style="width:78%"></i>
+        </div>
+
+        <div class="mini-grid">
+
+            <span>Furniture</span>
+            <b>45%</b>
+
+            <span>Decor</span>
+            <b>20%</b>
+
+            <span>Lighting</span>
+            <b>15%</b>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="grid-3">
+
+    <a
+        class="feature-card"
+        href="/home-planner"
+    >
+
+        <div class="icon">
+            🏠
+        </div>
+
+        <h3>
+            Home Planner
+        </h3>
+
+        <p>
+            Allocate a home budget across
+            furniture, lighting, storage
+            and decor.
+        </p>
+
+    </a>
+
+
+    <a
+        class="feature-card"
+        href="/party-planner"
+    >
+
+        <div class="icon">
+            🎉
+        </div>
+
+        <h3>
+            Party Planner
+        </h3>
+
+        <p>
+            Balance food, venue,
+            decoration and contingency
+            for your guest count.
+        </p>
+
+    </a>
+
+
+    <a
+        class="feature-card"
+        href="/jewelry-planner"
+    >
+
+        <div class="icon">
+            💎
+        </div>
+
+        <h3>
+            Jewelry Planner
+        </h3>
+
+        <p>
+            Get occasion and style based
+            suggestions with optional
+            outfit-image analysis.
+        </p>
+
+    </a>
+
+</section>
+
+
+<div class="notice">
+
+    <b>Demo-friendly:</b>
+
+    No Gemini key is required to test
+    the application.
+
+    The local fallback engine keeps
+    the complete flow working.
+
+</div>
+
+{% endblock %}

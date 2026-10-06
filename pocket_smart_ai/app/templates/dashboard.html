@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard — PocketSmart AI
+{% endblock %}
+
+
+{% block content %}
+
+<div class="page-head">
+
+    <div>
+
+        <span class="eyebrow">
+            YOUR SPACE
+        </span>
+
+        <h1 id="hello">
+            Dashboard
+        </h1>
+
+        <p class="muted">
+            Pick a planner and let your
+            budget do the talking.
+        </p>
+
+    </div>
+
+</div>
+
+
+<section class="grid-3">
+
+    <a
+        class="feature-card"
+        href="/home-planner"
+    >
+
+        <div class="icon">
+            🏠
+        </div>
+
+        <h3>
+            Home Interior
+        </h3>
+
+        <p>
+            Furniture, lighting,
+            decor and storage.
+        </p>
+
+    </a>
+
+
+    <a
+        class="feature-card"
+        href="/party-planner"
+    >
+
+        <div class="icon">
+            🎉
+        </div>
+
+        <h3>
+            Party Planning
+        </h3>
+
+        <p>
+            Food, venue, decoration
+            and contingency.
+        </p>
+
+    </a>
+
+
+    <a
+        class="feature-card"
+        href="/jewelry-planner"
+    >
+
+        <div class="icon">
+            💎
+        </div>
+
+        <h3>
+            Jewelry
+        </h3>
+
+        <p>
+            Occasion, outfit and
+            style matching.
+        </p>
+
+    </a>
+
+</section>
+
+
+<div class="section-row">
+
+    <h2>
+        Recent plans
+    </h2>
+
+    <a href="/history">
+        View all →
+    </a>
+
+</div>
+
+
+<div
+    id="recentPlans"
+    class="history-list"
+>
+
+    <div class="loading">
+        Loading…
+    </div>
+
+</div>
+
+{% endblock %}
+
+
+{% block scripts %}
+
+<script>
+loadDashboard();
+</script>
+
+{% endblock %}
